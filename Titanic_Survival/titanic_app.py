@@ -267,7 +267,7 @@ def main():
          
          st.subheader("Author : LAGRE GABBA BERTRAND")
          st.write(" Data Develper") 
-         st.write("Github link  : https://github.com/FoubaDev/CodSoft.git \n")
+         st.write("Github link  : https://github.com/FoubaDev/CODSOFT.git \n")
 
          st.write(" It is my pleasure to see you reading my work. The objective of the dataset is to  predict Titatic survival.")
 
