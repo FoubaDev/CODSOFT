@@ -14,11 +14,20 @@ import matplotlib.pyplot as plt
 from streamlit_option_menu import option_menu
 
 
-df = pd.read_csv("creditcard.csv")
 
-#random_forest = joblib.load('CreditCard card_prediction.sav')
-# loading the saved model
-loaded_model = joblib.load(open('creditcard.sav', 'rb'))
+@st.cache_resource
+def load_data_csv():
+   df = pd.read_csv("titanic.csv")
+   return df
+
+@st.cache_resource
+def load_data_sav():
+   loaded_model = joblib.load(open('titanic.sav', 'rb'))
+   return loaded_model
+
+
+df = load_data_csv()
+loaded_model = load_data_sav()
 
 
 @st.cache_resource
